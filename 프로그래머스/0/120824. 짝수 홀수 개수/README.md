@@ -1,4 +1,4 @@
-# [level 0] 짝수 홀수 개수 - 120824  
+# [level 0] 짝수 홀수 개수 - 120824   
 
 [문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120824) 
 
