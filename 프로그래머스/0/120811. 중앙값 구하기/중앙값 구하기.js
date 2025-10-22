@@ -1,5 +1,5 @@
 function solution(array) {
-    let arr = array.sort((a, b) => a - b);
-    let i = Math.floor(arr.length / 2);
-    return array[i];
+    const middle = Math.round(array.length / 2);
+    var answer = array.sort((a,b) => a - b);
+    return answer[middle-1];
 }
