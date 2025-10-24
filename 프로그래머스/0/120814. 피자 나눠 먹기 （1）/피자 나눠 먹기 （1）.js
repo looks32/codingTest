@@ -1,4 +1,4 @@
 function solution(n) {
-    return Math.ceil(n/7);
+    let pizza = Math.ceil(n/7);
+    return pizza
 }
-
