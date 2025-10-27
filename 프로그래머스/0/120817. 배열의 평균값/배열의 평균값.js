@@ -1,8 +1,5 @@
 function solution(numbers) {
-    var ans = 0;
-    for(let i=0; i<numbers.length; i++){
-       ans += numbers[i] 
-    }
-    ans =  ans / numbers.length
-    return ans;
+    var answer = 0;
+    answer = numbers.reduce((a, b) => a + b)
+    return answer / numbers.length;
 }
