@@ -1,6 +1,8 @@
 function solution(money) {
     var answer = [];
-    answer[0] = Math.floor(money/5500)
-    answer[1] = money - 5500 * answer[0]
+    const ea = Math.floor(money / 5500);
+    const total = money - (ea * 5500)
+    answer.push(ea, total)
+    
     return answer;
 }
