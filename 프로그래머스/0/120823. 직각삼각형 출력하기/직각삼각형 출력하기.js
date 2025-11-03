@@ -7,9 +7,12 @@ const rl = readline.createInterface({
 let input = [];
 
 rl.on('line', function (line) {
-    for(let i = 0; i < line; i++){
-        input += '*'.repeat(i + 1) + '\n';
-    }
+    input = line.split(' ');
 }).on('close', function () {
-    console.log(input);
+    let star = '';
+    for(let i = 1; i <= input[0]; i++){
+        star += '*';
+        console.log(star);
+    }
+    
 });
