@@ -1,11 +1,18 @@
 function solution(num_list) {
-    var answer = [0, 0];
-    for(let i = 0; i < num_list.length; i++){
+    var answer = [];
+    let a = 0;
+    let b = 0;
+    
+    for(let i = 0; i<num_list.length; i++){
         if(num_list[i] % 2 === 0){
-            answer[0] ++;
+           a++;
         } else {
-            answer[1] ++;
+           b++;
         }
     }
+    
+    answer[0] = a;
+    answer[1] = b;
+    
     return answer;
 }
