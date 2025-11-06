@@ -1,3 +1,5 @@
 function solution(my_string, letter) {
-    return my_string.split('').filter((v) => v !== letter).join('')
+    var answer = '';
+    answer = my_string.replaceAll(letter, '')
+    return answer;
 }
