@@ -1,6 +1,8 @@
 function solution(n, k) {
     var answer = 0;
-    const service = parseInt(n / 10);
-    answer = (n * 12000) + (k * 2000) - (service * 2000);
+    let drink = 2000;
+    let meet = 12000;
+    let service = Math.floor(n / 10);
+    answer = n * meet + k * drink - service * drink;
     return answer;
 }
