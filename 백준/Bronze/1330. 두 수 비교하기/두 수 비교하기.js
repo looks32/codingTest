@@ -1,10 +1,22 @@
+// 입력 기본 템플릿 (BOJ + 로컬 겸용, CRLF 정리)
 const fs = require('fs');
-const [A, B] = fs.readFileSync(0, 'utf-8').trim().split(' ').map(Number);
+const path = require('path');
 
-if(A > B){
-   console.log('>'); 
-}else if(A == B){
-    console.log('=='); 
-}else{
-    console.log('<'); 
-} 
+const src =
+  process.platform === 'linux'
+    ? 0
+    : process.env.LOCAL_INPUT || path.join(__dirname, 'input.txt');
+const raw = fs.readFileSync(src, 'utf8').replace(/\r/g, '').trim();
+
+const lines = raw.split('\n'); // 줄 단위가 필요할 때
+const tokens = raw.split(/\s+/); // 공백 단위가 필요할 때
+const nums = tokens.map(Number); // 전부 숫자면 이 한 줄로도 OK
+
+// --- 여기부터 풀이 ---
+if (nums[0] < nums[1]) {
+  console.log('<');
+} else if (nums[0] == nums[1]) {
+  console.log('==');
+} else {
+  console.log('>');
+}
