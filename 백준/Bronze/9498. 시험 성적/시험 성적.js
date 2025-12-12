@@ -1,14 +1,26 @@
+// 입력 기본 템플릿 (BOJ + 로컬 겸용, CRLF 정리)
 const fs = require('fs');
-const [A] = fs.readFileSync(0, 'utf-8').trim().split(' ').map(Number);
+const path = require('path');
 
-if (A >= 90) {
-   console.log('A');
-} else if (A >= 80) {
-   console.log('B');
-} else if (A >= 70) {
-   console.log('C');
-} else if (A >= 60) {
-   console.log('D');
+const src =
+  process.platform === 'linux'
+    ? 0
+    : process.env.LOCAL_INPUT || path.join(__dirname, 'input.txt');
+const raw = fs.readFileSync(src, 'utf8').replace(/\r/g, '').trim();
+
+const lines = raw.split('\n'); // 줄 단위가 필요할 때
+const tokens = raw.split(/\s+/); // 공백 단위가 필요할 때
+const nums = tokens.map(Number); // 전부 숫자면 이 한 줄로도 OK
+
+// --- 여기부터 풀이 ---
+if (nums[0] >= 90) {
+  console.log('A');
+} else if (nums[0] >= 80) {
+  console.log('B');
+} else if (nums[0] >= 70) {
+  console.log('C');
+} else if (nums[0] >= 60) {
+  console.log('D');
 } else {
-   console.log('F');
+  console.log('F');
 }
