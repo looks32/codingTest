@@ -1,10 +1,6 @@
 function solution(sides) {
-    let arr = []
-    arr = sides.sort((a, b) => a - b);
-    if(arr[0] + arr[1] > arr[2]){
-        return 1
-    } else {
-        return 2
-    }
+    var answer = 0;
+    sides = sides.sort((a,b) => a - b);
+    const result = sides[2] < sides[1] + sides[0] ? 1 : 2
+    return result;
 }
-
