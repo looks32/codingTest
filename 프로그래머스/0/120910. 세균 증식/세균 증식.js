@@ -1,6 +1,7 @@
 function solution(n, t) {
+    let result = n;
     for(let i = 1; i<=t; i++){
-        n *= 2
+        result = 2 * result;
     }
-    return n;
+    return result;
 }
