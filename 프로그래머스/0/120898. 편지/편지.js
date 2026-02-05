@@ -1,3 +1,4 @@
 function solution(message) {
-    return message.length * 2; 
+    const arr = message.split('');
+    return arr.length * 2;
 }
