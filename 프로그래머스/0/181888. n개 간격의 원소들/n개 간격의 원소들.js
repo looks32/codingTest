@@ -1,7 +1,5 @@
 function solution(num_list, n) {
     var answer = [];
-    for(let i = 0; i<=num_list.length-1; i+=n){
-        answer.push(num_list[i])
-    }
+    answer = num_list.filter((v, i) => i % n == 0)
     return answer;
 }
