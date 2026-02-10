@@ -1,14 +1,6 @@
 function solution(array) {
-    let answer = [];
-    let index;
-    const max = Math.max(...array);
-    for(let i = 0; i<array.length; i++){
-        if(array[i] === max){
-            index = i
-        }
-    }
-    
-    answer = [max, index]
-    
-    return answer;
+    var answer = [];
+    const array2 = [...array].sort((a,b) => a - b);
+    const result = array2[array.length - 1]
+    return [result, array.indexOf(result)];
 }
