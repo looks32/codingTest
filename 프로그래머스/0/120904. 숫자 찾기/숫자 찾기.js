@@ -1,8 +1,4 @@
 function solution(num, k) {
-    var answer = num.toString()
-    if (answer.includes(k)) {
-        return answer.indexOf(k) + 1;
-    } else {
-        return -1;
-    }
-}
+    const arr = String(num).split("").map(Number).indexOf(k);
+    return arr >= 0 ? arr + 1  : -1 
+}    
