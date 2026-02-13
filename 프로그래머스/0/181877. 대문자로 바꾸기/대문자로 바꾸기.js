@@ -1,5 +1,3 @@
 function solution(myString) {
-    var answer;
-    answer = myString.toUpperCase();
-    return answer;
+    return myString.toUpperCase();
 }
