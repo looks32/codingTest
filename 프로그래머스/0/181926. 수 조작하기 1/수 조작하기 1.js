@@ -1,17 +1,20 @@
 function solution(n, control) {
-    var answer = n;
-    
-    for(let i = 0; i<control.length; i++){
-        if(control[i] == 'w'){
-            answer += 1;
-        } else if(control[i] == 's'){
-            answer -= 1;
-        } else if(control[i] == 'd'){
-            answer += 10;
-        } else if(control[i] == 'a'){
-            answer -= 10;
+    let answer = n;
+    for (const c of control) {
+        switch (c) {
+            case 'w':
+                answer += 1;
+                break;
+            case 's':
+                answer -= 1;
+                break;
+            case 'd':
+                answer += 10;
+                break;
+            case 'a':
+                answer -= 10;
+                break;
         }
     }
     return answer;
 }
-
