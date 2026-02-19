@@ -14,5 +14,5 @@ const nums = tokens; // 전부 숫자면 이 한 줄로도 OK
 
 // --- 여기부터 풀이 ---
 const arr = lines[1].split('');
-const result = arr.reduce((v, s) => Number(v) + Number(s), 0);
+const result = arr.reduce((v, s) => v + Number(s), 0);
 console.log(result);
