@@ -1,4 +1,3 @@
 function solution(my_string) {
-    var answer = '';
-    return answer = my_string.toLowerCase().split("").sort().join('');
+    return my_string.split('').sort((a, b) => a.localeCompare(b)).join('').toLowerCase();
 }
