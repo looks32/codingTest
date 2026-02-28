@@ -1,3 +1,5 @@
 function solution(a, b) {
-    return Math.max(Number(`${a}${b}`), Number(`${b}${a}`))
+    let num1 = parseInt(a+""+b+"");
+    let num2 = parseInt(b+""+a+"");
+    return num1 > num2 ? num1 : num2
 }
