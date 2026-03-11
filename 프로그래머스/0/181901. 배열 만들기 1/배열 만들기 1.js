@@ -1,9 +1,9 @@
 function solution(n, k) {
-    var answer = [];
+    let result = [];
     for(let i = 1; i <= n; i++){
-        if(i%k == 0){
-            answer.push(i) 
+        if(i % k === 0){
+            result.push(i);
         }
     }
-    return answer;
+    return result;
 }
