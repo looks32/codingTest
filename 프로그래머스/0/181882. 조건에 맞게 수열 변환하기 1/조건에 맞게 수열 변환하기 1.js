@@ -1,13 +1,13 @@
 function solution(arr) {
     var answer = [];
-    arr.forEach((v)=>{
-        if(v % 2 == 0 && v >= 50){
-            answer.push(v/2)
-        } else if(v % 2 != 0 && v <= 50){
-            answer.push(v*2)
+    for(let i = 0; i < arr.length; i++){
+        if(arr[i] >= 50 && arr[i] % 2 === 0){
+            answer.push(arr[i] / 2);
+        } else if(arr[i] <= 50 && arr[i] % 2 !== 0){
+            answer.push(arr[i] * 2);
         } else {
-            answer.push(v)
+            answer.push(arr[i]);
         }
-    })
+    }
     return answer;
 }
