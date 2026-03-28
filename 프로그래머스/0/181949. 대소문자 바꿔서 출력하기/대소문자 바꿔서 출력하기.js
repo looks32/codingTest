@@ -10,21 +10,11 @@ rl.on('line', function (line) {
     input = [line];
 }).on('close',function(){
     str = input[0];
-    let result = '';
-    
-    function isUpperCase(str) {
-      return str === str.toUpperCase();
-    }
-    
-    for(i=0; i<str.length; i++){
-        
-        if(isUpperCase(str[i])){
-            result += str[i].toLowerCase();
-        } else{
-            result += str[i].toUpperCase();
-        }
-       
-    }
-    
-    console.log(result)
+    console.log(str.split('').map((v) => v == v.toUpperCase() ? v.toLowerCase() : v.toUpperCase()).join(''))
 });
+
+// if (char === char.toUpperCase()) {
+//  console.log('대문자');
+//} else {
+//  console.log('소문자');
+// }
