@@ -1,38 +1,15 @@
 function solution(ineq, eq, n, m) {
-    var answer = 0;
-    var sign = ineq+eq;
+
+    const op = ineq + eq;
     
-    if(sign == '<='){
-        if(n <= m){
-            return 1 
-        } else {
-            return 0
-        }
+    if (op === ">="){
+        return n >= m ? 1 : 0;
+    } else if (op === "<="){
+        return n <= m ? 1 : 0;
+    } else if (op === ">!"){
+        return n > m ? 1 : 0;
+    } else {
+        return n < m ? 1 : 0;
     }
-    
-    if(sign == '>='){
-        if(n >= m){
-            return 1 
-        } else {
-            return 0
-        }
-    }
-    
-    if(sign == '>!'){
-        if(n > m){
-            return 1 
-        } else {
-            return 0
-        }
-    }
-    
-    if(sign == '<!'){
-        if(n < m){
-            return 1 
-        } else {
-            return 0
-        }
-    }
-    
-    
+
 }
